@@ -1,0 +1,21 @@
+services:
+  dnssearcher:
+    image: dnssearcher
+    container_name: dnssearcher
+    build:
+      context: ./dnssearcher
+      dockerfile: Dockerfile
+    ports:
+      - 8000:8000
+  proxy:
+    image: proxy
+    container_name: proxy
+    build:
+      context: ./proxy
+      dockerfile: Dockerfile
+      args:
+        ENABLED_MODULES: headers-more
+    ports:
+      - 80:80
+    volumes:
+      - ./proxy/nginx.conf:/etc/nginx/nginx.conf
