@@ -1,0 +1,2 @@
+Probe TCP GetRequest q|GET / HTTP/1.0\r\n\r\n|
+match http m|^HTTP/\d\.\d \d{3} \w+\r\n[dD]ate: [ \w:,]+\r\n[sS]erver:\s+dnssearcher v([\d\.]+)| p/DNSSearcher/ v/$1/ cpe:/a:connorshade:dnssearcher:$1/a
