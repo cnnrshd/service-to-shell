@@ -161,3 +161,6 @@ cython_debug/
 .venv*
 msf4/history
 msf4/meterpreter_history
+msf4/bootsnap_cache/metadata.yaml
+msf4/bootsnap_cache/bootsnap/load-path-cache
+msf4/store/modules_metadata.json
