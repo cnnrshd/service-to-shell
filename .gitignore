@@ -160,3 +160,4 @@ cython_debug/
 #.idea/
 .venv*
 msf4/history
+msf4/meterpreter_history
